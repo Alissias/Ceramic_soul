@@ -4,7 +4,16 @@
     @include title;
     font-style: italic;
     font-size: 24px;
-    text-align: center;
+}
+
+.title-h2 {
+    @include title;
+    font-size: 32px;
+}
+
+.title-h3 {
+    @include title;
+    font-size: 20px;
 }
 
 @media screen and (min-width: 1920px) {
