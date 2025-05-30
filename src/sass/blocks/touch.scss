@@ -78,10 +78,11 @@
 
 @media screen and (min-width: 1200px) {
 	.touch {
+        position: relative;
 		&__img {
 			display: block;
-			width: 550px;
-			height: 342px;
+			width: 100%;
+			height: 341.76px;
 			object-fit: cover;
 			box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
 		}
@@ -91,14 +92,41 @@
                 outline: 1px solid $dark;
             }
         }
+        &__col {
+            width: 49.7%;
+            padding-left: 40px;
+        }
+        &__vase {
+            position: absolute;
+            right: 30px;
+            bottom: 0;
+        }
 	}
 }
 
 @media screen and (min-width: 1920px) {
 	.touch {
+        margin-top: 10px;
 		&__img {
 			width: 100%;
 			height: 356px;
+
 		}
+		&__form {
+			width: auto;
+			padding-left: 146px;
+		}
+        &__fieldset {
+            display: flex;
+        }
+        &__input,
+        &__textarea {
+            width: 300px;
+        }
+        &__input-block {
+            &__email {
+                margin-left: 45px;
+            }
+        }
 	}
 }
