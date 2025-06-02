@@ -74,6 +74,25 @@
     &__btn {
         margin-top: 20px;
     }
+    &__vase {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+	.touch {
+		&__form {
+			position: relative;
+			width: 300px;
+			padding-left: 24px;
+		}
+		&__vase {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -96,17 +115,15 @@
             width: 49.7%;
             padding-left: 40px;
         }
-        &__vase {
-            position: absolute;
-            right: 30px;
-            bottom: 0;
-        }
 	}
 }
 
 @media screen and (min-width: 1920px) {
 	.touch {
         margin-top: 10px;
+        &__col {
+            padding-left: 0px;
+        }
 		&__img {
 			width: 100%;
 			height: 356px;
