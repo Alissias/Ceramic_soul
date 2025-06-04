@@ -25,3 +25,21 @@
     text-transform: uppercase;
     cursor: pointer;
 }
+
+@mixin angle-decoration {
+    &::after, &::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background-color: $dark;
+    }
+    &::after{
+        width: 200px;
+        height: 1px;
+    }
+    &::before {
+        width: 1px;
+        height: 200px;
+    }
+}
