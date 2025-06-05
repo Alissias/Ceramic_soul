@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+import JustValidate from 'just-validate';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -68,6 +69,91 @@ try {
 
 // Обратите внимание, что значение block (в двух местах) можно спокойно поменять на flex, если вам это необходимо
 
+
+try {
+  const validator = new JustValidate('form');
+
+  validator
+    .addField('#name', [
+      {
+        rule: 'required',
+        errorMessage: 'Please fill the name',
+      },
+      {
+        rule: 'minLength',
+        value: 2,
+        errorMessage: 'Min 2 char!'
+      },
+    ])
+    .addField('#email', [
+      {
+        rule: 'required',
+      },
+      {
+        rule: 'email',
+      },
+    ])
+    .addField('#question', [
+      {
+        rule: 'required',
+      },
+      {
+        rule: 'minLength',
+        value: 5,
+      },
+    ], {
+      errorsContainer: document
+        .querySelector('#question')
+        .parentElement.querySelector('.error-message'),
+    })
+    .addField('#checkbox', [
+      {
+        rule: 'required',
+      },
+    ], {
+      errorsContainer: document
+        .querySelector('#checkbox')
+        .parentElement.parentElement.querySelector('.checkbox-error-message'),
+    })
+} catch (e) {
+
+}
+
+
+try {
+	const validatorFooter = new JustValidate(".footer__form");
+
+	validatorFooter
+		.addField(
+			"#footer__email",
+			[
+				{
+					rule: "required",
+				},
+				{
+					rule: "email",
+				},
+			],
+			{
+				errorsContainer: document
+					.querySelector("#footer__email")
+					.parentElement.querySelector(".email-error-message"),
+			}
+		)
+		.addField(
+			"#footer__checkbox",
+			[
+				{
+					rule: "required",
+				},
+			],
+			{
+				errorsContainer: document
+					.querySelector("#footer__checkbox")
+					.parentElement.parentElement.querySelector(".check-error-message"),
+			}
+		);
+} catch (e) {}
 
 import "purecss/build/grids-min.css";
 import "purecss/build/grids-responsive-min.css";
