@@ -1,6 +1,12 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .footer {
+    .just-validate-error-field {
+        border-bottom: 1px solid $ui-error;
+        &::placeholder {
+            color: $ui-error;
+        }
+    }
     padding: 50px 0;
     background-color: $dark;
     &_spaced {
@@ -38,7 +44,10 @@
 		font-weight: 400;
 		line-height: normal;
 		color: $ui-active;
-        	&::placeholder {
+        &:focus {
+            outline: none;
+        }
+        &::placeholder {
 			font-size: 14px;
 			font-style: normal;
 			font-weight: 400;
@@ -47,14 +56,14 @@
 		}
     }
     &__check-block {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    color: $light;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        color: $light;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
 		a {
 			margin-left: 3px;
 			text-decoration: none;
