@@ -5,6 +5,7 @@ import JustValidate from 'just-validate';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'animate.css';
 
 const burger = document.querySelector(".burger"),
 	close = document.querySelector(".header__menu-close"),

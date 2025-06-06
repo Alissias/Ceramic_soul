@@ -119,6 +119,9 @@
             width: 49.7%;
             padding-left: 40px;
         }
+        &__vase {
+            animation: moveAndRotate 2s linear infinite;
+        }
 	}
 }
 
